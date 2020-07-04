@@ -10,6 +10,7 @@
         android:id="@+id/shown_count"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         android:background="#ffff00"
         android:gravity="center"
         android:text="@string/zero"
@@ -24,19 +25,21 @@
 
     <Button
         android:id="@+id/button-toast"
-        android:layout_width="638dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:onClick="shownToast"
         android:text="@string/Toast_test"
         android:textColor="@android:color/white"
         android:textSize="60sp"
-        tools:layout_editor_absoluteX="1dp"
+        app:layout_constraintEnd_toStartOf="@+id/button_count"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="16dp" />
 
     <Button
         android:id="@+id/button_count"
-        android:layout_width="639dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:onClick="countUp"
@@ -44,7 +47,9 @@
         android:textColor="@android:color/white"
         android:textSize="60sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/button-toast"
-        tools:layout_editor_absoluteX="640dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button-toast" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
